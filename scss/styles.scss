@@ -1,0 +1,132 @@
+$white-color: #fefefe;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin alignment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: $white-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  padding: 0 150px;
+  min-height: 100vh;
+  @include alignment;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  height: 150px;
+  @include alignment;
+  flex-flow: wrap;
+  flex-direction: row;
+  width: 50%;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.5em;
+    width: 100%;
+  }
+
+  input {
+    width: 20%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    }
+
+    #subm {
+      background-color: $white-color;
+        letter-spacing: 1px;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: rgb(19, 19, 19);
+          color: $white-color;
+          cursor: pointer;
+        }
+    }
+
+    #reset {
+      border-color: red;
+      background-color: $white-color;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: red;
+        color: $white-color;
+      }
+    }
+}
+
+  main {
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    height: calc(100vh - 130px);
+    @include alignment;
+    flex-flow: row wrap;
+
+    .box {
+      @include alignment;
+      flex-direction: column;
+      background-color: $white-color;
+      width: 200px;
+      height: 150px;
+      padding: 10px;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow:  20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+      margin: 10px;
+      border-radius: 10px;
+
+      &:nth-child(odd) {
+        background: linear-gradient(225deg, #e6e6e6, #ffffff);
+        box-shadow:  -20px 20px 60px #d9d9d9, 20px -20px 60px #ffffff;
+      }
+
+      &:hover * {
+        font-weight: bold;
+        color: blue;
+      }
+
+      p {
+        color: rgb(192, 1, 49);
+        font-weight: bold;
+        text-align: center;
+        padding-top: 1em;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    body {
+      padding: 0 10px;
+    }
+
+    header {
+      width: 100%;
+
+      input {
+        width: 25%;
+        padding: 5px;
+        margin-right: 10px;
+      }
+    }
+
+    main {
+      top: 220px;
+    }
+  }

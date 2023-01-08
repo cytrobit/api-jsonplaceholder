@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fefefe;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  padding: 0 150px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  flex-direction: row;
+  width: 50%;
+  text-align: center;
+}
+header h1 {
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+header input {
+  width: 20%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-right: 1em;
+}
+header input:last-child {
+  margin-right: 0;
+}
+header #subm {
+  background-color: #fefefe;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+header #subm:hover {
+  background-color: rgb(19, 19, 19);
+  color: #fefefe;
+  cursor: pointer;
+}
+header #reset {
+  border-color: red;
+  background-color: #fefefe;
+  transition: 0.3s;
+}
+header #reset:hover {
+  background-color: red;
+  color: #fefefe;
+}
+
+main {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  height: calc(100vh - 130px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+main .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fefefe;
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  margin: 10px;
+  border-radius: 10px;
+}
+main .box:nth-child(odd) {
+  background: linear-gradient(225deg, #e6e6e6, #ffffff);
+  box-shadow: -20px 20px 60px #d9d9d9, 20px -20px 60px #ffffff;
+}
+main .box:hover * {
+  font-weight: bold;
+  color: blue;
+}
+main .box p {
+  color: rgb(192, 1, 49);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1em;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0 10px;
+  }
+  header {
+    width: 100%;
+  }
+  header input {
+    width: 25%;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  main {
+    top: 220px;
+  }
+}/*# sourceMappingURL=styles.css.map */
